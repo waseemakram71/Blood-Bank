@@ -1,38 +1,383 @@
-.App {
-  text-align: center;
+
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sign{
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.email{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.password{
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.main-2{
+  width: 100%;
+  height: 100vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background: #fff
+}
+.log{
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.email-2{
+  display: flex;
+  flex-direction: column;
+}
+.password-2{
+  display: flex;
+  flex-direction: column;
+}
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.error {
+  color: rgb(230, 32, 32);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.main-btn{
+  display: flex;
+  
+  
+}
+.pre{
+  width: 100px;
+  padding-bottom: 5px;
+  display: flex;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.page{
+  padding-bottom: 4px;
+  margin-top: 3px;
+}
+.next{
+  width: 100px;
+  padding-bottom: 5px;
+ 
+}
+
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.Container {
+  animation: slideInFromLeft 0.5s ease;
+}
+.donor-details{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+span{
+ 
+  color: black;
+}
+.donor{
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+
+}
+/* DonorList.css */
+
+/* CSS for the DonorList component */
+/* Add this CSS to your existing styles or create a new CSS file */
+
+/* Define table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Define different shades for odd and even rows */
+tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light shade for odd rows */
+}
+
+tr:nth-child(even) {
+  background-color: #e6e6e6; /* Slightly darker shade for even rows */
+}
+
+/* Define style for the 'Blood Group' cell with a custom class */
+td.groupe {
+  font-weight: bold;
+  color: #cf3535;
+  text-align: center;
+ 
+  /* Customize the text color for blood group cells */
+}
+tr:hover {
+  background-color: #7ba6bc; /* Change background color on hover */
+  cursor: pointer;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0c68ca;
+ 
+}
+
+/* Optional styles to make it more visually appealing */
+/* div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+/* } */ */
+/* ProcurerList.css */
+
+.procurer-list-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+ 
+}
+
+
+.label {
+  margin-right: 10px;
+}
+
+.select-input {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.find-matches-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.find-matches-button:hover {
+  background-color: #0056b3;
+}
+
+.matches-container {
+  margin-top: 20px;
+}
+
+.matches-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.matches-list li {
+  margin-bottom: 5px;
+}
+/* DonorList.css */
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #1aa91e;
   color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination-button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.nav-bar-link{
+  text-decoration: none;
+
+}
+.home-container {
+  background: url('../src/assets/bloodbank5.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; /* Use viewport height to cover full screen height */
+}
+
+
+
+
+/* For responsiveness (optional) */
+/* Add this at the end of your existing CSS file or create a new CSS file for responsiveness */
+
+/* For responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust the styles for smaller screens here */
+  .main-btn {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-btn div {
+    margin-bottom: 10px;
+  }
+
+  .pre,
+  .next {
+    width: 100%;
+  }
+
+  .page {
+    text-align: center;
   }
 }
+
+/* For even smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 480px) {
+  /* Add additional styles for even smaller screens here */
+  .main-btn {
+    flex-direction: column;
+  }
+
+  .pre,
+  .next {
+    width: 100%;
+  }
+
+  .page {
+    text-align: center;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .label {
+    margin-bottom: 5px;
+  }
+
+  .select-input {
+    width: 100%;
+  }
+
+  .find-matches-button {
+    width: 100%;
+  }
+
+  .donor-details {
+    padding: 20px;
+  }
+}
+
+
+
